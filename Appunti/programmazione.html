@@ -1,0 +1,851 @@
+<hmtl>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b825376dbf.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <title>Programmazione</title>
+    <meta charset="utf-8">
+    <style>
+      :root{
+        --first_color:#000000; /* Background */
+        --second_color:#A3AF9E; /* Main Text, Border */
+        --third_color:#3F4A3C; /* Special area background */
+        --fourth_color:#00FF00; /* Special area text */
+        --fifth_color:#FFFFFF;
+        --sixth_color:#000000;
+        --note_color:#A3AF9E;
+
+        --title_font:"Gotthard";
+        --text_font:"FiraCode";
+        --code_field_font:"FiraCode";
+      }
+      /* List Setting */
+      li.topic_description p.code_field{
+        display:inline-block;
+        padding:0.5em;
+        font-family:var(--code_field_font);
+        font-size:1em;
+        color:var(--fourth_color);
+        background-color:var(--third_color);
+        border:1px solid var(--fourth_color);
+      }
+      i.note{
+        color:var(--note_color);
+      }
+    </style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="content">
+      <div class="topic_list">
+        <ul><li>Algoritmica</li>
+          <li>
+            <ul><li>Algoritmi Vari</li>
+              <li>
+                <ul><li>Costo Computazionale di un Algoritmo</li>
+                  <li>
+                    <p>
+                      Tempo <i class="note"># istruzioni elementari</i><br/>
+                      Spazio <i class="note"># celle di memoria durante l'esecuzione
+                        (senza contare le celle occupare dai dati di input)</i><br/>
+                      Si esprimono come funzioni matematiche della dimensione dei dati di input<br/>
+                      <br/>
+                      <i class="note">A: algoritmo, I: istanza di Input, |I|: dimensione input</i><br/>
+                      <u>Caso Pessimo:</u><br/>
+                      max <sub>I,|I| = n</sub> {T<sub>A</sub>(n)}<br/>
+                      <i class="note">Limite superiore per il costo in tempo di A (valido per tutte le istanze di dim. n)</i><br/>
+                      <u>Caso Ottimo:</u><br/>
+                      min <sub>I,|I| = n</sub> {T<sub>A</sub>(n)}<br/>
+                      <u>Caso Medio:</u><br/>
+                      Costo medio delle istanze di dim. n
+                    </p>
+                  </li>
+                </ul>
+                <ul><li>Moltiplicazione Egizia</li>
+                  <li>
+                    <p class="code_field">
+                      <i class="note">Moltiplicazione Egizia (1650 A.C., Papiro di Ahmes)</i><br/>
+                      procedure molt(a,b)<br/>
+                      &emsp;p=0<br/>
+                      &emsp;while a > 0<br/>
+                      &emsp;&emsp;if a è dispari<br/>
+                      &emsp;&emsp;&emsp;p=p+b<br/>
+                      &emsp;&emsp;end if<br/>
+                      &emsp;&emsp;a=a/2<br/>
+                      &emsp;&emsp;b=b*2<br/>
+                      &emsp;end while<br/>
+                      end procedure return p
+                    </p>
+                  </li>
+                </ul>
+                <ul><li>12 Monete</li>
+                  <li>
+                    <div class="tree">
+                      <ul>
+                        <li>1,2,3,4:5,6,7,8</li>
+                        <ul>
+                          <li>1,2,5:3,4,6</li>
+                          <ul>
+                            <li>1:2</li>
+                            <ul>
+                              <li>1L</li>
+                            </ul>
+                            <ul>
+                              <li>6P</li>
+                            </ul>
+                            <ul>
+                              <li>2L</li>
+                            </ul>
+                          </ul>
+                          <ul>
+                            <li>7:8</li>
+                            <ul>
+                              <li>8P</li>
+                            </ul>
+                            <ul>
+                              <li>imp.</li>
+                            </ul>
+                            <ul>
+                              <li>7P</li>
+                            </ul>
+                          </ul>
+                          <ul>
+                            <li>3:4</li>
+                            <ul>
+                              <li>3L</li>
+                            </ul>
+                            <ul>
+                              <li>5P</li>
+                            </ul>
+                            <ul>
+                              <li>4L</li>
+                            </ul>
+                          </ul>
+                        </ul>
+                        <ul>
+                          <li>9,10:11,1</li>
+                          <ul>
+                            <li>9:10</li>
+                            <ul>
+                              <li>9L</li>
+                            </ul>
+                            <ul>
+                              <li>11P</li>
+                            </ul>
+                            <ul>
+                              <li>10L</li>
+                            </ul>
+                          </ul>
+                          <ul>
+                            <li>12:1</li>
+                            <ul>
+                              <li>12L</li>
+                            </ul>
+                            <ul>
+                              <li>0</li>
+                            </ul>
+                            <ul>
+                              <li>12P</li>
+                            </ul>
+                          </ul>
+                          <ul>
+                            <li>9:10</li>
+                            <ul>
+                              <li>10P</li>
+                            </ul>
+                            <ul>
+                              <li>11L</li>
+                            </ul>
+                            <ul>
+                              <li>9P</li>
+                            </ul>
+                          </ul>
+                        </ul>
+                        <ul>
+                          <li>1,2,5:3,4,6</li>
+                          <ul>
+                            <li>3:4</li>
+                            <ul>
+                              <li>4P</li>
+                            </ul>
+                            <ul>
+                              <li>5L</li>
+                            </ul>
+                            <ul>
+                              <li>3P</li>
+                            </ul>
+                          </ul>
+                          <ul>
+                            <li>7:8</li>
+                            <ul>
+                              <li>7L</li>
+                            </ul>
+                            <ul>
+                              <li>imp.</li>
+                            </ul>
+                            <ul>
+                              <li>8L</li>
+                            </ul>
+                          </ul>
+                          <ul>
+                            <li>1:2</li>
+                            <ul>
+                              <li>2P</li>
+                            </ul>
+                            <ul>
+                              <li>6L</li>
+                            </ul>
+                            <ul>
+                              <li>1P</li>
+                            </ul>
+                          </ul>
+                        </ul>
+                      </ul>
+                    </div>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul><li>Algoritmi di Ordinamento</li>
+              <li>
+                <ul><li>BubbleSort</li>
+                  <li>
+                    <p class="code_field">
+                      procedure bubbleSort(A <i class="note">: array of items</i>)<br/>
+                      &emsp;loop = A.count<br/>
+                      &emsp;for i=0 to loop-1 do<br/>
+                      &emsp;&emsp;swapped=false<br/>
+                      &emsp;&emsp;for j=0 to loop-1 do<br/>
+                      &emsp;&emsp;&emsp;if A[j] > a[j+1] then<br/>
+                      &emsp;&emsp;&emsp;&emsp;swap(A[j],A[j+1])<br/>
+                      &emsp;&emsp;&emsp;&emsp;swapped=true<br/>
+                      &emsp;&emsp;&emsp;end if<br/>
+                      &emsp;&emsp;end for<br/>
+                      &emsp;&emsp;if (not swapped) then<br/>
+                      &emsp;&emsp;&emsp;break<br/>
+                      &emsp;&emsp;end if
+                      &emsp;end for<br/>
+                      end procedure return A
+                    </p>
+                  </li>
+                </ul>
+                <ul><li>CountingSort</li>
+                  <li>
+                  </li>
+                </ul>
+                <ul><li>HeapSort</li>
+                  <li>
+                  </li>
+                </ul>
+                <ul><li>InsertionSort</li>
+                  <li>
+                    <p class="code_field">
+                      procedure InsertionSort(A <i class="note">: array of items</i>)<br/>
+                      &emsp;for j=2 to n<br/>
+                      &emsp;&emsp;k=A[j]<br/>
+                      &emsp;&emsp;i=j-1<br/>
+                      &emsp;&emsp;while i>0 AND A[i] > k<br/>
+                      &emsp;&emsp;&emsp;A[i+1]=A[i]<br/>
+                      &emsp;&emsp;&emsp;i--<br/>
+                      &emsp;&emsp;end while
+                      &emsp;&emsp;A[i+1]=k
+                      &emsp;end for
+                      end procedure return A
+                    </p>
+                    <p>
+                      <u>Dimostrazione di Correttezza</u>:<br/>
+                      Tecnica dell'invariante di ciclo<br/>
+                      Invariante:<br/>
+                      All'inizio di ogni iterazione del ciclo for il sottoarray a[1 ... j-1] è <u>ordinato</u> e contiene
+                      gli stessi elementi che erano originariamente in a[1 ... j-1]<br/>
+                      <br/>
+                      Passi della DIMOSTRAZIONE<br/>
+                      1 - <u>Inizializzazione</u>: l'invariante di ciclo è vera prima della prima iterazione del ciclo<br/>
+                      j=2, a[1]<br/>
+                      2 - <u>Conservazione</u>: l'invariante rimane vera prima della successiva iterazione del ciclo<br/>
+                      ok per ispezione del codice<br/>
+                      3 - <u>Conclusione</u>: valutazione dell'invariante a fine ciclo -> correttezza dell'algoritmo<br/>
+                      alla fine del ciclo for j=n+1, a[1 ... n] è ordinato e contiene gli elementi che erano originariamente
+                      in a[1 ... n]
+                    </p>
+                    <p>
+                      <u>Analisi di complessità</u>:<br/>
+                      I=a[1 ... n],|I|=n
+                      &#8721;<sub>j=2</sub><sup>n</sup>
+                    </p>
+                  </li>
+                </ul>
+                <ul><li>MergeSort</li>
+                  <li>
+                  </li>
+                </ul>
+                <ul><li>QuickSort</li>
+                  <li>
+                  </li>
+                </ul>
+                <ul><li>SelectionSort</li>
+                  <li>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul><li>Linguaggi</li>
+          <li>
+            <ul><li>Android</li>
+              <li>
+                <ul><li>Activity</li>
+                  <li>
+                    <ul><li>Activity più usate</li>
+                      <li>
+                        <p class="code_field">
+                          ACTION_ANSWER<br/>
+                          ACTION_ATTACH_DATA<br/>
+                          ACTION_CALL<br/>
+                          ACTION_CHOOSER<br/>
+                          ACTION_DELETE<br/>
+                          ACTION_DIAL<br/>
+                          ACTION_EDIT<br/>
+                          ACTION_FACTORY_TEST<br/>
+                          ACTION_GET_CONTENT<br/>
+                          ACTION_INSERT<br/>
+                          ACTION_MAIN<br/>
+                          ACTION_PICK<br/>
+                          ACTION_PICK_ACTIVITY<br/>
+                          ACTION_RUN<br/>
+                          ACTION_SEARCH<br/>
+                          ACTION_SEND<br/>
+                          ACTION_SENDTO<br/>
+                          ACTION_SYNC<br/>
+                          ACTION_VIEW<br/>
+                          ACTION_WEB_SEARCH
+                        </p>
+                      </li>
+                    </ul>
+                    <ul><li>Altre Activity</li>
+                      <li>
+                        <p class="code_field">
+                          ACTION_AIRPLANE_MODE_CHANGED<br/>
+                          ACTION_ALL_APPS<br/>
+                          ACTION_APP_ERROR<br/>
+                          ACTION_BATTERY_CHANGED<br/>
+                          ACTION_BATTERY_LOW<br/>
+                          ACTION_BATTERY_OKAY<br/>
+                          ACTION_BOOT_COMPLETED<br/>
+                          ACTION_BUG_REPORT<br/>
+                          ACTION_CALL_BUTTON<br/>
+                          ACTION_CAMERA_BUTTON<br/>
+                          ACTION_CLOSE_SYSTEM_DIALOGS<br/>
+                          ACTION_CONFIGURATION_CHANGED<br/>
+                          ACTION_CREATE_SHORTCUT<br/>
+                          ACTION_DATE_CHANGED<br/>
+                          ACTION_DEFAULT<br/>
+                          ACTION_DEVICE_STORAGE_LOW<br/>
+                          ACTION_DEVICE_STORAGE_OK<br/>
+                          ACTION_DOCK_EVENT<br/>
+                          ACTION_EXTERNAL_APPLICATIONS_AVAILABLE<br/>
+                          ACTION_EXTERNAL_APPLICATIONS_UNAVAILABLE<br/>
+                          ACTION_GTALK_SERVICE_CONNECTED<br/>
+                          ACTION_GTALK_SERVICE_DISCONNECTED<br/>
+                          ACTION_HEADSET_PLUG<br/>
+                          ACTION_INPUT_METHOD_CHANGED<br/>
+                          ACTION_INSERT_OR_EDIT<br/>
+                          ACTION_INSTALL_PACKAGE<br/>
+                          ACTION_LOCALE_CHANGED<br/>
+                          ACTION_MANAGE_NETWORK_USAGE<br/>
+                          ACTION_MANAGE_PACKAGE_STORAGE<br/>
+                          ACTION_MEDIA_BAD_REMOVAL<br/>
+                          ACTION_MEDIA_BUTTON<br/>
+                          ACTION_MEDIA_CHECKING<br/>
+                          ACTION_MEDIA_EJECT<br/>
+                          ACTION_MEDIA_MOUNTED<br/>
+                          ACTION_MEDIA_NOFS<br/>
+                          ACTION_MEDIA_REMOVED<br/>
+                          ACTION_MEDIA_SCANNER_FINISHED<br/>
+                          ACTION_MEDIA_SCANNER_SCAN_FILE<br/>
+                          ACTION_MEDIA_SCANNER_STARTED<br/>
+                          ACTION_MEDIA_SHARED<br/>
+                          ACTION_MEDIA_UNMOUNTABLE<br/>
+                          ACTION_MEDIA_UNMOUNTED<br/>
+                          ACTION_MY_PACKAGE_REPLACED<br/>
+                          ACTION_NEW_OUTGOING_CALL<br/>
+                          ACTION_PACKAGE_ADDED<br/>
+                          ACTION_PACKAGE_CHANGED<br/>
+                          ACTION_PACKAGE_DATA_CLEARED<br/>
+                          ACTION_PACKAGE_FIRST_LAUNCH<br/>
+                          ACTION_PACKAGE_FULLY_REMOVED<br/>
+                          ACTION_PACKAGE_INSTALL<br/>
+                          ACTION_PACKAGE_NEEDS_VERIFICATION<br/>
+                          ACTION_PACKAGE_REMOVED<br/>
+                          ACTION_PACKAGE_REPLACED<br/>
+                          ACTION_PACKAGE_RESTARTED<br/>
+                          ACTION_PASTE<br/>
+                          ACTION_POWER_CONNECTED<br/>
+                          ACTION_POWER_DISCONNECTED<br/>
+                          ACTION_POWER_USAGE_SUMMARY<br/>
+                          ACTION_PROVIDER_CHANGED<br/>
+                          ACTION_REBOOT<br/>
+                          ACTION_SCREEN_OFF<br/>
+                          ACTION_SCREEN_ON<br/>
+                          ACTION_SEARCH_LONG_PRESS<br/>
+                          ACTION_SEND_MULTIPLE<br/>
+                          ACTION_SET_WALLPAPER<br/>
+                          ACTION_SHUTDOWN<br/>
+                          ACTION_SYSTEM_TUTORIAL<br/>
+                          ACTION_TIME_CHANGED<br/>
+                          ACTION_TIME_TICK<br/>
+                          ACTION_TIMEZONE_CHANGED<br/>
+                          ACTION_UID_REMOVED<br/>
+                          ACTION_UMS_CONNECTED<br/>
+                          ACTION_UMS_DISCONNECTED<br/>
+                          ACTION_UNINSTALL_PACKAGE<br/>
+                          ACTION_USER_PRESENT<br/>
+                          ACTION_VOICE_COMMAND<br/>
+                          ACTION_WALLPAPER_CHANGED
+                        </p>
+                      </li>
+                    </ul>
+                    <ul><li>Ciclo di vita di un Activity</li>
+                      <li>
+                        <p class="code_field">
+                          onCreate() <i class="note">// inizializziamo lo stato</i><br/>
+                          onStart() <i class="note">// stiamo per essere resi visibili, UI pronta!</i><br/>
+                          onResume() <i class="note">// stiamo per diventare top dello stack, da ora in poi riceviamo input dall'utente</i><br/>
+                          onPause() <i class="note">// un'altra activity sta per diventare top. Salviamo lo stato dell'UI</i><br/>
+                          onStop() <i class="note">// non siamo più visibili, non dobbiamo preoccuparci di tenere la UI aggiornata</i><br/>
+                          onDestroy() <i class="note">// o abbiamo finito (con finish()) o stanno per distruggerci. Si salvi chi può (UI non importa, dati si)</i>
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul><li>Intent</li>
+                  <li>
+                    <ul><li>Contenuti di un intent</li>
+                      <li>
+                        <p class="code_field">
+                          Action <i class="note">// quale azione si vuole ottenere (String)</i><br/>
+                          Data <i class="note">// su quali dati operare (URI)</i><br/>
+                          Category <i class="note">// categoria dell'azione (String)</i><br/>
+                          Type <i class="note">// tipo MIME di Data (String) viene ricavato da Data se non fornito; se è fornito fa override su quello di Data</i><br/>
+                          Component <i class="note">// componente a cui è indirizzato il messaggio Solo per intent espliciti</i><br/>
+                          Extras <i class="note">// un Bundle (mappa chiavi → valori) di ulteriori campi</i><br/>
+                          Flag <i class="note">// al solito, quando hai dimenticato qualcosa...</i>
+                        </p>
+                      </li>
+                    </ul>
+                    <ul><li>Esempi di Intent</li>
+                      <li>
+                        <ul><li>Chiamare un numero di telefono</li>
+                          <li>
+                            <p class="code_field">
+                              Intent i = new Intent(Intent.ACTION_CALL);<br/>
+                              i.setData(Uri.parse("tel:0502212773"));<br/>
+                              startActivity(i);
+                            </p>
+                          </li>
+                        </ul>
+                        <ul><li>Andare su una pagina web</li>
+                          <li>
+                            <p class="code_field">
+                              Intent i = new Intent(Intent.ACTION_VIEW);<br/>
+                              i.setData(Uri.parse("http://www.di.unipi.it"));<br/>
+                              startActivity(i);
+                            </p>
+                          </li>
+                        </ul>
+                        <ul><li>Inviare una mail</li>
+                          <li>
+                            <p class="code_field">
+                              Intent i = new Intent(Intent.ACTION_SENDTO);<br/>
+                              i.setType(“text/plain”);<br/>
+                              i.putExtra(Intent.EXTRA_EMAIL, new String[] { “gervasi@di.unipi.it”} );<br/>
+                              i.putExtra(Intent.EXTRA_CC, new String[] {“cisterni@di.unipi.it”});<br/>
+                              i.putExtra(Intent.EXTRA_SUBJECT, “Riunione di domani”);<br/>
+                              i.putExtra(Intent.EXTRA_TEXT, “Carissimi, …”);<br/>
+                              startActivity(i);
+                            </p>
+                          </li>
+                        </ul>
+                        <ul><li>Impostare una sveglia</li>
+                          <li>
+                            <p class="code_field">
+                              <i class="note">//METHOD CHAINING</i><br/>
+                              Intent i = new Intent(Intent.ACTION_SET_ALARM)<br/>
+                              &emsp;.putExtra(Intent.EXTRA_HOUR, 16)<br/>
+                              &emsp;.putExtra(Intent.EXTRA_MINUTES, 00)<br/>
+                              &emsp;.putExtra(Intent.EXTRA_MESSAGE, “Lezione SAM”)<br/>
+                              &emsp;.putExtra(Intent.EXTRA_VIBRATE, true);<br/>
+                              startActivity(i);
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul><li>Contenuto Package</li>
+                  <li>
+                    <ul><li>AndroidManifest.xml</li>
+                      <li>
+                        <p class="code_field">
+                          Configurazione dell'app (nome, icona, package Java, ...)<br/>
+                          Informazioni sui permessi necessari e definiti<br/>
+                          Elenco dei componenti dell'applicazione<br/>
+                          &emsp;– Configurazione di ciascun componente, inclusa classe Java<br/>
+                          &emsp;– Dettagli sugli Intent dei vari componenti<br/>
+                          Altri metadati<br/>
+                          &emsp;– Librerie necessarie, strumenti di profiling, ecc<br/>
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul><li>Layout Manager</li>
+                  <li>
+                    <ul><li>Comuni</li>
+                      <li>
+                        <p class="code_field">
+                          AbsoluteLayout <i class="note">// Coordinate assolute (x,y) per ogni componente - ugh!</i><br/>
+                          LinearLayout <i class="note">// Serie verticale o orizzontale di componenti</i><br/>
+                          RelativeLayout <i class="note">// Posizione di ogni componente relativa agli altri o al contenitore</i><br/>
+                          GridLayout <i class="note">// Griglia di celle di dimensione variabile (ma allineate); componenti a cavallo di più celle</i><br/>
+                          FrameLayout <i class="note">// Componenti uno sull'altro (l'ultimo aggiunto sta in cima) - solitamente usato con un solo componente</i><br/>
+                          TableLayout <i class="note">// Versione alternetiva a GridLayout; Ha come figli singole view (che coprono una riga intera) o oggetti TableRow (i quali hanno come figli le view che occupano le singole celle)</i>
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+                <ul><li>Listener</li>
+                  <li>
+                    <ul><li>Comuni</li>
+                      <li>
+                        <p class="code_field">
+                          OnAttachStateChangeListener<br/>
+                          <i class="note">Le View possono essere inserite o rimossa da un albero dinamicamente (a run-time)<br/>
+                            &emsp;onViewAttachedToWindow(View v)<br/>
+                            &emsp;onViewDetachedFromWindow(View v)</i><br/>
+                          OnClickListener<br/>
+                          <i class="note">Chiamato quando c'è un click (logico!) sulla View<br/>
+                            &emsp;onClick(View v)</i><br/>
+                          OnDragListener<br/>
+                          <i class="note">Le View possono essere drag-droppate una sull'altra<br/>
+                            &emsp;onDrag(View v, DragEvent e)<br/>
+                          Vengono chiamati gli onDrag(), secondo un protocollo noto<br/>
+                          &emsp;– della vista draggata<br/>
+                          &emsp;– di quella da cui viene draggata<br/>
+                          &emsp;– di quelle su cui passa<br/>
+                          &emsp;– di quella su cui viene droppata</i><br/>
+                          OnGenericMotionListener<br/>
+                          <i class="note">Quando l'utente poggia o sposta il dito sullo schermo<br/>
+                          &emsp;onGenericMotion(View v, MotionEvent e)<br/>
+                          Inviato prima di “interpretare” l'evento (es.: come click)</i><br/>
+                          OnKeyListener<br/>
+                          <i class="note">Quando l'utente preme un tasto<br/>
+                          &emsp;onKey(View v, int keycode_field, KeyEvent ke)</i><br/>
+                          OnLongClickListener<br/>
+                          <i class="note">&emsp;onLongClick(View v) – simile a onClick(), ma più lungo!</i>
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul><li>Assembly</li>
+              <li>
+              </li>
+            </ul>
+            <ul><li>C</li>
+              <li>
+              </li>
+            </ul>
+            <ul><li>C++</li>
+              <li>
+              </li>
+            </ul>
+            <ul><li>CSS</li>
+              <li>
+                <ul><li>Font</li>
+                  <li>
+                    <p class="code_field">
+                      @font-face {<br/>
+                        &emsp;font-family:"nomefont";<br/>
+                        &emsp;src=url("urlfont");<br/>
+                      }
+                    </p>
+                  </li>
+                </ul>
+                <ul><li>Variabili</li>
+                  <li>
+                    <p class="code_field">
+                      <i class="note">// Dichiarazione variabili globali</i><br/>
+                      ::root{<br/>
+                      &emsp;--NOMEVARIABILE:CONTENUTO;<br/>
+                      }<br/>
+                      <i class="note">// Utilizzo</i><br/>
+                      var(--NOMEVARIABILE)
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul><li>HTML</li>
+              <li>
+                <ul><li>HEAD</li>
+                  <li>
+                    <p class="code_field">
+
+                    </p>
+                  </li>
+                </ul>
+                <ul><li>BODY</li>
+                  <li>
+
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul><li>Java</li>
+              <li>
+              </li>
+            </ul>
+            <ul><li>Javascript</li>
+              <li>
+              </li>
+            </ul>
+            <ul><li>Kotlin</li>
+              <li>
+              </li>
+            </ul>
+            <ul><li>MySQL</li>
+              <li>
+                <ul><li>Data Types</li>
+                  <li>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul><li>PHP</li>
+              <li>
+              </li>
+            </ul>
+            <ul><li>Python</li>
+              <li>
+              </li>
+            </ul>
+            <ul><li>Ruby</li>
+              <li>
+              </li>
+            </ul>
+            <ul><li>XML</li>
+              <li>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul><li>Hobby</li>
+          <li>
+            <ul><li>Roll20</li>
+              <li>
+                <ul><li>Comandi Base</li>
+                  <li>
+                    <p class="code_field">
+                      <i class="note">Inserire Template: </i>
+                      &{template:default} {{name=(header)}} {{(sinistra)=[[(tira)]]}} {{(sinistra)=(destra)}}<br/>
+                      <i class="note">Emote: </i>
+                      /me (frase)<br/>
+                      <i class="note">Tiro: </i>
+                      /r (numero dadi)d(facce dado)<br/>
+                      <i class="note">Macro: </i>
+                      #(nome macro)<br/>
+                      <i class="note">If: </i>
+                      ?{(domanda)|(opzione 1),(risultato 1) |(opzione 2),(risultato 2) }<br/>
+                      <i class="note">Abilità: </i>
+                      %{(personaggio)|(abilità)}<br/>
+                      <i class="note">Attributi: </i>
+                      /r 1d20 + @{(personaggio)|(attibuto)|(max)}<br/>
+                      <i class="note">Roll in linea: </i>
+                      Ciao [[D4]]<br/>
+                      <i class="note">Roll con messaggio: </i>
+                      [[D4[ciao]]]<br/>
+                      <i class="note">Roll con Scelte Libere: </i>
+                      [[D20+?{Bonus}]]<br/>
+                      <i class="note">Roll con Opzioni: </i>
+                      [[D20+?{Bonus|1|2}]]<br/>
+                      <i class="note">Roll con Opzioni "Avanzato": </i>
+                      [[D20+?{Usare il Bonus?|Si, 1|No, 0}]]<br/>
+                      <i class="note">Roll Esplosivo: </i>
+                      [[D4!]]<br/>
+                      <i class="note">Modifica Critico: </i>
+                      [[D20cs&#x22;10]]<br/>
+                      <i class="note">Modifica Fallimento Critico: </i>
+                      [[D20cf&#x3C;11]] <br/>
+                      <i class="note">Modifica Critico e Fallimento Critico: </i>
+                      [[D20cs&#x22;10cf&#x3C;11]]
+                    </p>
+                  </li>
+                </ul>
+                <ul><li>Pathfinder Sheet</li>
+                  <li>
+                    <ul><li>Costanti</li>
+                      <li>
+                        <ul><li>Immagini</li>
+                          <li>
+                            <p class="code_field">
+                              [Spell](http://imgur.com/9yjOsAD.png)<br/>
+                              [Attack(Melee)](http://i.imgur.com/AGq5VBG.png)<br/>
+                              [Attack(Dual)](http://i.imgur.com/Eh243RO.png)<br/>
+                              [Attack(Ranged)](http://imgur.com/58j2e8P.png)<br/>
+                              [Attack(Cmb)](http://i.imgur.com/Si4vfts.png)<br/>
+                              [Defense](http://imgur.com/02fV6wh.png)<br/>
+                              [Generic](http://imgur.com/phw1eFB.png)<br/>
+                              [Ability](http://i.imgur.com/UxYSva8.png)<br/>
+                              [Block](http://imgur.com/nBnv4DL.png)<br/>
+                              [Generic(Skill)](http://imgur.com/8dCkRtG.png)<br/>
+                              [Generic(Initiative)](http://i.imgur.com/pjS6HVJ.png)<br/>
+                              [Block(Item)](http://i.imgur.com/4FgQuqS.png)<br/>
+                              [Block(Ability Check)](http://i.imgur.com/a6O3ZGB.png)
+                            </p>
+                          </li>
+                        </ul>
+                        <ul><li>Colori</li>
+                          <li>
+                            <p class="code_field">
+                              Nero -> Standard<br/>
+                              Bianco -> white<br/>
+                              Grigio -> grey<br/>
+                              Grigio Scuro -> darkgrey<br/>
+                              Rosa -> pink<br/>
+                              Rosa Scuro -> darkpink<br/>
+                              Rosso -> red<br/>
+                              Rosso Scuro -> darkred<br/>
+                              Arancione -> orange<br/>
+                              Arancione Scuro -> darkorange<br/>
+                              Marrone Cioccolato -> chocolate<br/>
+                              Marrone Chiaro -> sandybrown<br/>
+                              Marrone -> peru<br/>
+                              Marrone Scuro -> saddlebrown<br/>
+                              Marrone Molto Chiaro -> tan<br/>
+                              Giallo -> yellow<br/>
+                              Oro -> gold<br/>
+                              Giallo Scuro -> darkyellow<br/>
+                              Verde -> green<br/>
+                              Verde Scuro -> darkgreen<br/>
+                              Oliva -> olive<br/>
+                              Oliva Scuro -> darkolivegreen<br/>
+                              Verde Acqua -> teal<br/>
+                              Verde Acqua Scuro -> darkteal<br/>
+                              Ciano -> cyan<br/>
+                              Ciano Scuro -> darkcyan<br/>
+                              Azzurro -> azure<br/>
+                              Azzurro Scuro -> darkazure<br/>
+                              Blu -> blue<br/>
+                              Blu Scuro -> darkblue<br/>
+                              Viola -> purple<br/>
+                              Viola Scuro -> darkpurple<br/>
+                              Violetto -> violet<br/>
+                              Violetto Scuro -> darkviolet
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <ul><li>Tipi di Roll Template</li>
+                      <li>
+                        <ul><li>Attributi Comuni</li>
+                          <li>
+                            <p class="code_field">
+                              @{PC-whisper} <i class="note">ATT_CON: vuoto o /w gm | se impostato su /w gm tira al gm</i><br/>
+                              @{toggle_accessible_flag} <i class="note">ATT_CON: {{accessible=true}} | se presente cambia il formato della template in una che non usa div e tabelle</i><br/>
+                              @{toggle_rounded_flag} <i class="note">ATT_CON: @{var_rounded_flag} ATT_CON: {{rounded=rounded}} | arrotonda i bordi</i><br/>
+                              {{font=@{apply_specfont_chat}@{use_specfont}}} <i class="note">ATT_CON1: 0~7(0=Arial,1=Verdana,2=Comic Sans,3=Segoe UI,4=Lucida Sans Unicode,5=Fantasy,6=Copperplate,7=Script) o 1 ATT_CON2: 0~1(0=false,1=true) | modifica il font</i><br/>
+                              {{scroll_desc=@{scroll-desc}}} <i class="note">ATT_CON: vuoto o scroll-desc | Permette di scrollare le descrizioni</i><br/>
+                              {{color=}} -> <i class="note">ATT: colore | colore macro</i><br/>
+                              {{header_image=}} -> <i class="note">ATT: [Scritta](url immagine) | immagine macro</i><br/>
+                              {{name=}} -> <i class="note">ATT: scritta |</i><br/>
+                              {{name_link=}} <i class="note">ATT: url | link ipertestuale sul nome</i><br/>
+                              {{character_name=}} -> <i class="note">ATT: scritta | Nome Personaggio</i><br/>
+                              {{character_id=@{character_id}}} -> <i class="note">ATT: codice | Codice identificativo personaggio</i><br/>
+                              {{subtitle=}} -> <i class="note">ATT: scritta | Sottotitolo</i><br/>
+                              {{=}} <i class="note">ATT_L: scritta, ATT_R: scritta | ATT_L a sinistra e ATT_R a destra</i><br/>
+                              {{description=}} <i class="note">ATT: testo | usa entrambe le colonne</i>
+                            </p>
+                          </li>
+                        </ul>
+                        <ul><li>Magia</li>
+                          <li>
+                            <p class="code_field">
+                              <i class="note">Dichiarazione: </i> &{template:pf_spell}<br/>
+                              @{toggle_spell_accessible}<br/>
+                              {{defeaned_note=@{SpellFailureNote}}}<br/>
+                              {{school=}} <i class="note">ATT: scritta | Scuola di Magia</i><br/>
+                              {{spellclass=}} <i class="note">ATT: scritta</i><br/>
+                              {{level=}} <i class="note">ATT: numero</i><br/>
+                              {{casting_time=}} <i class="note">ATT: scritta | tempo di cast</i><br/>
+                              {{components=}} <i class="note">ATT: scritta | componenti</i><br/>
+                              {{saving_trow=}} <i class="note">ATT: scritta | Tiro Salvezza</i><br/>
+                              {{dc=}} <i class="note">ATT: numero</i><br/>
+                              {{close=}} <i class="note">ATT: scritta</i><br/>
+                              {{range=}} <i class="note">ATT: numero | Raggio</i>
+                            </p>
+                          </li>
+                        </ul>
+                        <ul><li>Attacco</li>
+                          <li>
+                            <p class="code_field">
+                              <i class="note">Dichiarazione: </i> &{template:pf_attack}<br/>
+                              @{toggle_attack_accessible}<br/>
+                              {{attack=}} {{attack2=}} {{attack3=}} ... <i class="note">ATT: Tiro | Tiro per colpire</i><br/>
+                              {{damage=}} {{damage2=}} {{damage3=}} ... <i class="note">ATT: Tiro | Tiro per i danni</i><br/>
+                              {{crit_confirm=}} {{crit_confirm2=}} ... <i class="note">ATT: Tiro | Conferma Critico</i><br/>
+                              {{crit_damage=}} {{crit_damage2=}} ... <i class="note">ATT: Tiro | Danno Critico</i><br/>
+                              {{precision_dmg1=}} {{precision_dmg21}} ... <i class="note">ATT: Tiro | Danni da Precisione</i><br/>
+                              {{precision_dmg1_type=}} <i class="note">ATT: scritta | Tipo danno da precisione</i><br/>
+                              {{precision_dmg2=}} {{precision_dmg22}} ... <i class="note">ATT: Tiro | Danni da Precisione 2</i><br/>
+                              {{precision_dmg2_type=}} <i class="note">ATT: scritta | Tipo danno da precisione 2</i>
+                            </p>
+                          </li>
+                        </ul>
+                        <ul><li>Difesa</li>
+                          <li>
+                            <p class="code_field">
+                              <i class="note">Dichiarazione: </i> &{template:pf_defense}<br/>
+                            </p>
+                          </li>
+                        </ul>
+                        <ul><li>Generico</li>
+                          <li>
+                            <p class="code_field">
+                              <i class="note">Dichiarazione: </i> &{template:pf_generic}<br/>
+                            </p>
+                          </li>
+                        </ul>
+                        <ul><li>Abilità</li>
+                          <li>
+                            <p class="code_field">
+                              <i class="note">Dichiarazione: </i> &{template:pf_ability}<br/>
+                            </p>
+                          </li>
+                        </ul>
+                        <ul><li>Blocco</li>
+                          <li>
+                            <p class="code_field">
+                              <i class="note">Dichiarazione: </i> &{template:pf_block}<br/>
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

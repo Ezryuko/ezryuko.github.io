@@ -1,0 +1,730 @@
+<hmtl>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/b825376dbf.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+    <meta charset="utf-8">
+    <style>
+      :root{
+        --first_color:#DABDAB; /* Background */
+        --second_color:#53443A; /* Main Text, Border */
+        --third_color:#FFE9D0; /* Special area background */
+        --fourth_color:#000000; /* Special area text */
+        --fifth_color:#53B6B6;
+        --sixth_color:#A3AF9E; /* Notes */
+
+        --title_font:"Simply Rounded";
+        --text_font:"Chirota";
+        --note_font:"Chirota";
+        --celestial_font:"Enochian";
+      }
+      p{
+        margin:0.5em;
+        font-size:1.5em;
+        font-weight:bold;
+      }
+      span.celestial{
+        font-family:var(--celestial_font);
+        font-size:2em;
+      }
+      i.note{
+        font-family:var(--note_font);
+        color:var(--sixth_color);
+      }
+      input{
+        width:2em;
+        text-align:center;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="content">
+      <div class="topic_list">
+        <ul><li>Protagonisti</li>
+          <li>
+            <ul><li>Clary Fray</li>
+              <li>
+                <ul><li>Storia</li>
+                  <li>
+                  </li>
+                </ul>
+                <ul><li>Scheda</li>
+                  <li>
+                    <ul><li>Caratteristiche</li>
+                      <li>
+                        <table class="horizontal_header vertical_header">
+                          <tr>
+                            <td>Caratteristiche</td>
+                            <td>FOR</td>
+                            <td>DES</td>
+                            <td>COS</td>
+                            <td>INT</td>
+                            <td>SAG</td>
+                            <td>CAR</td>
+                          </tr>
+                          <tr>
+                            <td>Base</td>
+                            <td>14</td>
+                            <td>16</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>16</td>
+                            <td>10</td>
+                          </tr>
+                          <tr>
+                            <td>Razza</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>2</td>
+                            <td>2</td>
+                          </tr>
+                          <tr>
+                            <td>Livello</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>2</td>
+                            <td>-</td>
+                          </tr>
+                        </table>
+                      </li>
+                    </ul>
+                    <ul><li>Capacità</li>
+                      <li>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul><li>Gaiseric Godsbane</li>
+              <li>
+                <ul><li>Storia</li>
+                  <li>
+                  </li>
+                </ul>
+                <ul><li>Scheda</li>
+                  <li>
+                    <ul><li>Caratteristiche</li>
+                      <li>
+                        <table class="horizontal_header vertical_header">
+                          <tr>
+                            <td>Caratteristiche</td>
+                            <td>FOR</td>
+                            <td>DES</td>
+                            <td>COS</td>
+                            <td>INT</td>
+                            <td>SAG</td>
+                            <td>CAR</td>
+                          </tr>
+                          <tr>
+                            <td>Base</td>
+                            <td>15</td>
+                            <td>11</td>
+                            <td>16</td>
+                            <td>12</td>
+                            <td>10</td>
+                            <td>14</td>
+                          </tr>
+                          <tr>
+                            <td>Razza</td>
+                            <td>2</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-2</td>
+                            <td>-</td>
+                            <td>2</td>
+                          </tr>
+                          <tr>
+                            <td>Livello</td>
+                            <td>3</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                        </table>
+                      </li>
+                    </ul>
+                    <ul><li>Capacità</li>
+                      <li>
+                        <ul><li>Capacità Speciali</li>
+                          <li>
+                            <p>
+                              - Aura di Male<br/>
+                              - Individuazione del Bene<br/>
+                              - Punire il Bene<br/>
+                              - Resistenza Sacrilega<br/>
+                              - Tocco di Corruzione<br/>
+                              - Aura di Codardia<br/>
+                              - Crudeltà(Affaticato)<br/>
+                              - Portatore di Pestilenza<br/>
+                              - Incanalare Energia Negativa<br/>
+                              - Dono Immondo<br/>
+                              - Crudeltà(Barcollante)<br/>
+                            </p>
+                          </li>
+                        </ul>
+                        <ul><li>Tratti Razziali</li>
+                          <li>
+                            <p>
+                              - Tipo: Esterno(Nativo)<br/>
+                              - Taglia: Media<br/>
+                              - Caratteristiche: +2 For, -2 Int, +2 Car<br/>
+                              - Scurovisione 18m<br/>
+                              - Visione Crepuscolare<br/>
+                              - Assalto Elementale<br/>
+                              - Resistenza all'Energia: 5 Acido, Elettricità, Freddo, Fuoco<br/>
+                              - Negoziatore: +2 Diplomazia, Intuizione<br/>
+                              - Linguaggi: Comune, Ignan<br/>
+                            </p>
+                          </li>
+                        </ul>
+                        <ul><li>Talenti (4 Lvl)</li>
+                          <li>
+                            <p>
+                              - Incalzare<br/>
+                              - Attacco Poderoso<br/>
+                              - Furia Focalizzata<br/>
+                              - Colpo Vitale<br/>
+                            </p>
+                          </li>
+                        </ul>
+                        <ul><li>Capacità di Dominio</li>
+                          <li>
+                            <p>
+                              - Scudo di Forza<br/>
+                              - Combattente Elementale<br/>
+                              - Proiezione Astrale<br/>
+                            </p>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <ul><li>Equipaggiamento</li>
+                      <li>
+                        <ul><li>Armi</li>
+                          <li>
+                            <table class="horizontal_header vertical_header">
+                              <tr>
+                                <td>Nome</td>
+                                <td>Categoria</td>
+                                <td>Incantamento</td>
+                                <td>Taglia</td>
+                                <td>Danni</td>
+                                <td>Critico</td>
+                                <td>Gittata</td>
+                                <td>Tipo</td>
+                                <td>Materiale</td>
+                                <td>Speciale</td>
+                              </tr>
+                              <tr>
+                                <td>Spadone</td>
+                                <td>Mischia a 2 mani</td>
+                                <td>+2</td>
+                                <td>Media</td>
+                                <td>2d6</td>
+                                <td>19-20/x2</td>
+                                <td>-</td>
+                                <td>T</td>
+                                <td>Ferro</td>
+                                <td>-</td>
+                              </tr>
+                            </table>
+                          </li>
+                        </ul>
+                        <ul><li>Armature</li>
+                          <li>
+                            <table class="horizontal_header vertical_header">
+                              <tr>
+                                <td>Nome</td>
+                                <td>Categoria</td>
+                                <td>Incantamento</td>
+                                <td>Taglia</td>
+                                <td>CA</td>
+                                <td>Des Max</td>
+                                <td>Penalità</td>
+                                <td>Fallimento I.A.</td>
+                                <td>Materiale</td>
+                                <td>Speciale</td>
+                              </tr>
+                              <tr>
+                                <td>Armatura Completa</td>
+                                <td>Pesante</td>
+                                <td>+3</td>
+                                <td>Media</td>
+                                <td>9</td>
+                                <td>1</td>
+                                <td>-6</td>
+                                <td>35%</td>
+                                <td>Ferro</td>
+                                <td>-</td>
+                              </tr>
+                            </table>
+                          </li>
+                        </ul>
+                        <ul><li>Oggetti Magici</li>
+                          <li>
+
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul><li>Ryumiyaki</li>
+              <li>
+                <ul><li>Storia</li>
+                  <li>
+                    <p>
+                      Nato a Ghalt nell'anno XXXX, orfano fin dalla nascita è cresciuto insieme ad Ydra, una ragazza che era per lui come
+                      una sorella, per sopravvivere sono stati costretti a rubare e ad uccidere e questo li ha temprati, ha fatto di lui un
+                      abile guerriero e di lei una scaltra ladra. Al raggiungimento del suo X anno di età era ormai pronto per andarsene
+                      da quel posto per trovare nel continente degli avversari che fossero alla sua altezza. Durante il suo pellegrinaggio
+                      vide uno stormo di draghi e, conoscendo la loro leggendaria forza decise di unirsi ad un gruppo per andare ad
+                      affrontarli sotto consiglio di Ydra.
+                    </p>
+                  </li>
+                </ul>
+                <ul><li>Scheda</li>
+                  <li>
+                    <ul><li>Caratteristiche</li>
+                      <li>
+                        <table class="horizontal_header vertical_header">
+                          <tr>
+                            <td>Caratteristiche</td>
+                            <td>FOR</td>
+                            <td>DES</td>
+                            <td>COS</td>
+                            <td>INT</td>
+                            <td>SAG</td>
+                            <td>CAR</td>
+                          </tr>
+                          <tr>
+                            <td>Base</td>
+                            <td>17</td>
+                            <td>10</td>
+                            <td>14</td>
+                            <td>8</td>
+                            <td>15</td>
+                            <td>12</td>
+                          </tr>
+                          <tr>
+                            <td>Razza</td>
+                            <td>2</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <td>Livello</td>
+                            <td>3</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                        </table>
+                      </li>
+                    </ul>
+                    <ul><li>Capacità</li>
+                      <li>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul><li>Tela</li>
+              <li>
+                <ul><li>Storia</li>
+                  <li>
+                  </li>
+                </ul>
+                <ul><li>Scheda</li>
+                  <li>
+                    <ul><li>Caratteristiche</li>
+                      <li>
+                        <table class="horizontal_header vertical_header">
+                          <tr>
+                            <td>Caratteristiche</td>
+                            <td>FOR</td>
+                            <td>DES</td>
+                            <td>COS</td>
+                            <td>INT</td>
+                            <td>SAG</td>
+                            <td>CAR</td>
+                          </tr>
+                          <tr>
+                            <td>Base</td>
+                            <td>10</td>
+                            <td>16</td>
+                            <td>10</td>
+                            <td>10</td>
+                            <td>18</td>
+                            <td>8</td>
+                          </tr>
+                          <tr>
+                            <td>Razza</td>
+                            <td>2</td>
+                            <td>-</td>
+                            <td>2</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <td>Livello</td>
+                            <td>-</td>
+                            <td>3</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                          <tr>
+                            <td>Rango Mitico</td>
+                            <td>-</td>
+                            <td>2</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                        </table>
+                      </li>
+                    </ul>
+                    <ul><li>Capacità</li>
+                      <li>
+                        <p>
+                        </p>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul><li>Ziggs</li>
+              <li>
+                <ul><li>Storia</li>
+                  <li>
+                  </li>
+                </ul>
+                <ul><li>Scheda</li>
+                  <li>
+                    <ul><li>Caratteristiche</li>
+                      <li>
+                        <table class="horizontal_header vertical_header">
+                          <tr>
+                            <td>Caratteristiche</td>
+                            <td>FOR</td>
+                            <td>DES</td>
+                            <td>COS</td>
+                            <td>INT</td>
+                            <td>SAG</td>
+                            <td>CAR</td>
+                          </tr>
+                          <tr>
+                            <td>Base</td>
+                            <td>10</td>
+                            <td>14</td>
+                            <td>14</td>
+                            <td>18</td>
+                            <td>10</td>
+                            <td>8</td>
+                          </tr>
+                          <tr>
+                            <td>Razza</td>
+                            <td>-2</td>
+                            <td>4</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>-2</td>
+                          </tr>
+                          <tr>
+                            <td>Livello</td>
+                            <td>-</td>
+                            <td>2</td>
+                            <td>-</td>
+                            <td>1</td>
+                            <td>-</td>
+                            <td>-</td>
+                          </tr>
+                        </table>
+                      </li>
+                    </ul>
+                    <ul><li>Capacità</li>
+                      <li>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul><li>Regole Aggiuntive</li>
+          <li>
+            <ul><li>Dominio</li>
+              <li>
+                <ul><li>Regole Generali</li>
+                  <li>
+                    <p>
+                      Controllo degli elementi:
+                      <i class="note">Come azione standard puoi spostare 3m³*GD del tuo elemento di 1,5m*GD</i><br/>
+                    </p>
+                  </li>
+                </ul>
+                <ul><li>Acqua</li>
+                  <li>
+                    <p>
+                      Difesa dell'Acqua:<br/>
+                      <i class="note">+2*GD CA(Scudo), se non si effettuano azioni di attacco fornisce
+                        questo bonus anche ad un bersaglio a scelta entro 9m+(3m*GD) fino al prossimo turno</i><br/>
+                      Acqua Curativa:<br/>
+                      <i class="note">Come azione standard puoi curare 2d6*GD con energia positiva
+                         a un bersaglio entro 9m+(3m*GD), 4*GD volte al giorno</i><br/>
+                    </p>
+                  </li>
+                </ul>
+                <ul><li>Aria</li>
+                  <li>
+                    <p>
+                      Bombarolo del vento:<br/>
+                      <i class="note">+1d4*GD danni alle bombe, spinge tutti i bersagli nella direzione opposta all'esplosione di
+                      3m*GD</i><br/>
+                      Agilità dell'Aria:<br/>
+                      <i class="note">+2*GD CA(Schivare), se si effettuano azioni di movimento
+                        il bonus aumenta di 1*GD fino al prossimo turno</i><br/>
+                      Veloce come il Vento:<br/>
+                      <i class="note">La velocità aumenta di 3m*GD</i><br/>
+                    </p>
+                  </li>
+                </ul>
+                <ul><li>Etere</li>
+                  <li>
+                  </li>
+                </ul>
+                <ul><li>Terra</li>
+                  <li>
+                    <p>
+                      Pelle di Pietra:<br/>
+                      <i class="note">+1*GD RD/-, se non si effettuano azioni di movimento raddoppia fino al prossimo turno</i><br/>
+                    </p>
+                  </li>
+                </ul>
+                <ul><li>Fuoco</li>
+                  <li>
+                    <p>
+                      Attacco Rovente:<br/>
+                      <i class="note">Al primo attacco del turno infliggi una bruciatura per 3 turni, se il bersaglio è già bruciato
+                        incrementa la bruciatura e resetta la durata.<br/>
+                      *Bruciatura: Infligge 1d3*GD danni, aggiunge 1 dado ai danni per ogni incremento della bruciatura</i><br/>
+                      Furia del Fuoco:<br/>
+                      <i class="note">+2*GD TpC, se si effettua un azione di attacco contro un personaggio da cui si è
+                        subito un attacco nel turno precedente il bonus aumenta di +1*GD</i><br/>
+                      Impulso Fiammante:<br/>
+                      <i class="note">Una volta per turno quando un attacco contro un nemico va a segno ottieni un azione
+                      bonus di attacco contro quel nemico</i><br/>
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul><li>Artigianato</li>
+              <li>
+                <p>
+                  Prezzo: 1/3 del prezzo dell'oggetto<br/>
+                  Punti Avanzamento: Prezzo base(in Monete di Argento)/<br/>
+                  Avanzamento (per successo) {8 ore di lavoro}: Risultato*CD | x2 se critico<br/>
+                  Requisito per oggetto perfetto: Nessun Fallimento
+                </p>
+              </li>
+            </ul>
+            <ul><li>Creare Oggetti Magici</li>
+              <li>
+                <p>
+                  Prezzo: 1/2 del prezzo dell'oggetto<br/>
+                  Tempo di Ricarica(Giorni): prezzo base/(1000*Lv Incantatore)<br/>
+                  <br/>
+                  Aumentare il Potenziamento: Sottrarre il prezzo dell'incantamento gia presente<br/>
+                  <br/>
+                  Conservare un incantamento: Si può trasferire un incantamento in una pietra magica del costo di 1000MO<br/>
+                </p>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul><li>Strumenti Utili</li>
+          <li>
+            <ul><li>Contatore Punti Caratteristica</li>
+              <li>
+                <table class="horizontal_header">
+                  <tr>
+                    <td>FOR</td>
+                    <td>DES</td>
+                    <td>COS</td>
+                    <td>INT</td>
+                    <td>SAG</td>
+                    <td>CAR</td>
+                  </tr>
+                  <tr id="cpc_row">
+                    <td><input type="text" value="8"></input></td>
+                    <td><input type="text" value="8"></input></td>
+                    <td><input type="text" value="8"></input></td>
+                    <td><input type="text" value="8"></input></td>
+                    <td><input type="text" value="8"></input></td>
+                    <td><input type="text" value="8"></input></td>
+                  </tr>
+                  <tr>
+                    <td style="padding:0;"><div class="button" onclick="cpc()">Calcola</div></td>
+                    <td colspan="5" id="cpc_result"></td>
+                  </tr>
+                </table>
+              </li>
+            </ul>
+            <ul><li>Negozio</li>
+              <li>
+                <ul><li>Pachetto Base (60mo)</li>
+                  <li>
+                    <p>
+                      Otre (2l)<br/>
+                      Acciarino e pf.<br/>
+                      Amo da pesca<br/>
+                      Ampolla(vuota) x3<br/>
+                      Borsa da Cintura<br/>
+                      Candela x5<br/>
+                      Razioni di Cibo x30<br/>
+                      Carta(foglio) x10<br/>
+                      Chiodo da Rocciatore x10<br/>
+                      Coperta Invernale<br/>
+                      Corda di Canapa x60m<br/>
+                      Cote per affilare x5<br/>
+                      Gessetto x10<br/>
+                      Giaciglio<br/>
+                      Inchiostro<br/>
+                      Lanterna Schermabile<br/>
+                      Olio 2l<br/>
+                      Pennino<br/>
+                      Pentola di Ferro<br/>
+                      Rampino x3<br/>
+                      Sacco<br/>
+                      Secchio<br/>
+                      Pugnale<br/>
+                      Tenda<br/>
+                      Torcia x40<br/>
+                      Zaino
+                    </p>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <ul><li>Risorse</li>
+          <li>
+            <ul><li>NPC</li>
+              <li>
+                <ul><li>Samuele Beretta</li>
+                  <li>
+                  </li>
+                </ul>
+                <ul><li>Dino Beretta</li>
+                  <li>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <ul><li>Libri</li>
+              <li>
+                <p>
+                  <span class="celestial">
+                  Come cacciare un angelo:<br/>
+                  Dipingere sul muro un cerchio e scrivere sui bordi la frase "Celestiale creatura sparisci da questo posto".
+                  </span>
+                </p>
+              </li>
+            </ul>
+            <ul><li>Nemici</li>
+              <li>
+                <ul><li>Soprannaturali</li>
+                  <li>
+                    <ul><li>Djinn</li>
+                      <li>
+                        <table class="horizontal_header vertical_header">
+                          <tr><td>Lv</td><td>BaB</td><td>Tem</td><td>Ref</td><td>Vol</td></tr>
+                          <tr><td>1</td><td>+1</td><td>+0</td><td>+0</td><td>+2</td></tr>
+                          <tr><td>2</td><td>+2</td><td>+0</td><td>+0</td><td>+3</td></tr>
+                          <tr><td>3</td><td>+3</td><td>+1</td><td>+1</td><td>+3</td></tr>
+                          <tr><td>4</td><td>+4</td><td>+1</td><td>+1</td><td>+4</td></tr>
+                          <tr><td>5</td><td>+5</td><td>+1</td><td>+1</td><td>+4</td></tr>
+                          <tr><td>6</td><td>+6</td><td>+2</td><td>+2</td><td>+5</td></tr>
+                          <tr><td>7</td><td>+7</td><td>+2</td><td>+2</td><td>+5</td></tr>
+                          <tr><td>8</td><td>+8</td><td>+2</td><td>+2</td><td>+6</td></tr>
+                          <tr><td>9</td><td>+9</td><td>+3</td><td>+3</td><td>+6</td></tr>
+                          <tr><td>10</td><td>+10</td><td>+3</td><td>+3</td><td>+7</td></tr>
+                          <tr><td>11</td><td>+11</td><td>+3</td><td>+3</td><td>+7</td></tr>
+                          <tr><td>12</td><td>+12</td><td>+4</td><td>+4</td><td>+8</td></tr>
+                          <tr><td>13</td><td>+13</td><td>+4</td><td>+4</td><td>+8</td></tr>
+                          <tr><td>14</td><td>+14</td><td>+4</td><td>+4</td><td>+9</td></tr>
+                          <tr><td>15</td><td>+15</td><td>+5</td><td>+5</td><td>+9</td></tr>
+                          <tr><td>16</td><td>+16</td><td>+5</td><td>+5</td><td>+10</td></tr>
+                          <tr><td>17</td><td>+17</td><td>+5</td><td>+5</td><td>+10</td></tr>
+                          <tr><td>18</td><td>+18</td><td>+6</td><td>+6</td><td>+11</td></tr>
+                          <tr><td>19</td><td>+19</td><td>+6</td><td>+6</td><td>+11</td></tr>
+                          <tr><td>20</td><td>+20</td><td>+6</td><td>+6</td><td>+12</td></tr>
+                          <p>
+                            Tratti Razziali:<br/>
+                          </p>
+                        </table>
+                      </li>
+                    </ul>
+                    <ul><li>Demoni</li>
+                      <li>
+                      </li>
+                    </ul>
+                    <ul><li>Angeli</li>
+                      <li>
+                      </li>
+                    </ul>
+                    <ul><li>Wendigo</li>
+                      <li>
+                      </li>
+                    </ul>
+                    <ul><li>Vampiri</li>
+                      <li>
+                      </li>
+                    </ul>
+                    <ul><li>Licantropi</li>
+                      <li>
+                      </li>
+                    </ul>
+                    <ul><li>Changeling</li>
+                      <li>
+                      </li>
+                    </ul>
+                    <ul><li>Fate</li>
+                      <li>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
