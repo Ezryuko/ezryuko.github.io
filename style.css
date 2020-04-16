@@ -1,0 +1,8 @@
+:root{
+  --first_color:#FF0000;
+  --second_color:#000000;
+}
+body{
+  background-color: var(--first_color);
+  color: var(--second_color);
+}
