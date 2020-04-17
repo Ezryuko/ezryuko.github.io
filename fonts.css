@@ -34,3 +34,7 @@
   font-family:"Chirota";
   src:url("resources/Chirota Regular-Italic.otf");
 }
+@font-face{
+  font-family:"Rounded Elegance"
+  src: url("resources/fonts/Rounded_Elegance.ttf");
+}

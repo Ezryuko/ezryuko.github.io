@@ -1,5 +1,5 @@
 function createElements(){
-  $("body").prepend("<div class=\"header\"><ul class=\"menu_bar\"><a href=\"index.html\"><li>Home</li></a><a href=\"programmazione.html\"><li>Programmazione</li></a><a href=\"gdr.html\"><li>GDR</li></a><a href=\"testpage.html\"><li>Test</li></a></ul></div>");
+  $("body").prepend("<div class=\"header\"><ul class=\"menu_bar\"><a href=\"../index.html\"><li>Home</li></a><a href=\"programmazione.html\"><li>Programmazione</li></a><a href=\"gdr.html\"><li>GDR</li></a><a href=\"testpage.html\"><li>Test</li></a></ul></div>");
   $("div.topic_list ul").addClass("close");
   $("div.topic_list ul li:first-child").prepend("<i class=\"fas fa-chevron-right\"></i><i class=\"fas fa-chevron-down\"></i>");
 }
