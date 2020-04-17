@@ -10,8 +10,15 @@ body{
   background-image: var(--first_background);
   color: var(--second_color);
 }
-/* Cards */
+/* Header */
+/* Content */
+div.content{
+  width:80%;
+  text-align: center;
+}
+/* Flip-Cards */
 div.flip-card{
+  position:inline-block;
   background-color: transparent;
   width:300px;
   height:200px;
@@ -24,6 +31,7 @@ div.flip-card div:only-child{
   text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
+  border:1px solid var(--second_color);
 }
 div.flip-card:hover div:only-child{
   transform: rotateY(180deg);
@@ -36,7 +44,8 @@ div.flip-card div:only-child div:first-of-type, div.flip-card div:only-child div
   backface-visibility: hidden;
 }
 div.flip-card div:only-child div:first-of-type{
-  
+  background-color:var(--third_color);
+  color:var(--second_color);
 }
 div.flip-card div:only-child div:last-of-type{
   background-color:var(--third_color);
