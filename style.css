@@ -1,8 +1,45 @@
 :root{
-  --first_color:#FF0000;
-  --second_color:#000000;
+  --first_color:#FF6961;
+  --second_color:#FFFFFF;
+  --third_colord:#2F4858;
+  --fourth_color:;
+
+  --first_background: linear-gradient(to right top, #ff0000, #ff2e23, #ff453a, #ff584e, #ff6961);
 }
 body{
-  background-color: var(--first_color);
+  background-image: var(--first_background);
   color: var(--second_color);
+}
+/* Cards */
+div.flip-card{
+  background-color: transparent;
+  width:300px;
+  height:200px;
+  perspective: 1000px;
+}
+div.flip-card div:only-child{
+  position:relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+div.flip-card:hover div:only-child{
+  transform: rotateY(180deg);
+}
+div.flip-card div:only-child div:first-of-type, div.flip-card div:only-child div:last-of-type{
+  position:absolute;
+  width:100%;
+  height:100%;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+div.flip-card div:only-child div:first-of-type{
+  
+}
+div.flip-card div:only-child div:last-of-type{
+  background-color:var(--third_color);
+  color:var(--second_color);
+  transform: rotateY(180deg);
 }
