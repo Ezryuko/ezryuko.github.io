@@ -1,5 +1,5 @@
 function createElements(){
-  $("body").prepend("<div class=\"header\"><ul class=\"menu_bar\"><a href=\"index.html\"><li>Home</li></a><a href=\"letteraturainglese.html\"><li>Letteratura Inglese</li></a><a href=\"linguainglese.html\"><li>Lingua Inglese</li></a></ul></div>");
+  $("body").prepend("<div class=\"header\"><ul class=\"menu_bar\"><a href=\"../index.html\"><li>Home</li></a><a href=\"letteraturainglese.html\"><li>Letteratura Inglese</li></a><a href=\"linguainglese.html\"><li>Lingua Inglese</li></a></ul></div>");
   $("div.topic_list ul").addClass("close");
 }
 
