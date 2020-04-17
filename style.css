@@ -1,25 +1,63 @@
 :root{
   --first_color:#FF6961;
   --second_color:#FFFFFF;
-  --third_colord:#2F4858;
+  --third_color:#2F4858;
   --fourth_color:;
 
-  --first_background: linear-gradient(to right top, #ff0000, #ff2e23, #ff453a, #ff584e, #ff6961);
+  --first_background: linear-gradient(to right top, #ff5b00, #f34e0d, #e64015, #d93319, #cc251c);
+  --second_background: linear-gradient(to right top, #051937, #0c2540, #163048, #223c50, #2f4858);
 }
+/* Base Component */
 body{
+  margin:0;
+  padding:0;
   background-image: var(--first_background);
   color: var(--second_color);
 }
+::-webkit-scrollbar{
+  width:1em;
+}
+::-webkit-scrollbar-track{
+  background-image: var(--first_background);
+}
+::-webkit-scrollbar-thumb{
+  background-image:var(--second_background);
+}
 /* Header */
+div.header{
+  width:100%;
+  background-image: var(--second_background);
+}
+div.header > p{
+  margin:0;
+  padding:0.5em;
+  text-align:center;
+  font-size:2em;
+}
 /* Content */
 div.content{
+  margin:0 auto;
+  padding:10px;
   width:80%;
-  text-align: center;
+}
+/* Container */
+div.container{
+  width:100%;
+  border:1px solid var(--third_color);
+}
+div.container p:first-of-type{
+  margin:0;
+  padding:0.5em;
+  color:var(--second_color);
+  font-size:1.8em;
+  background-image:var(--second_background);
+}
+div.container div:first-of-type{
+  padding:10px;
 }
 /* Flip-Cards */
 div.flip-card{
-  position:inline-block;
-  background-color: transparent;
+  margin:10px;
   width:300px;
   height:200px;
   perspective: 1000px;
@@ -28,27 +66,43 @@ div.flip-card div:only-child{
   position:relative;
   width: 100%;
   height: 100%;
-  text-align: center;
   transition: transform 0.8s;
   transform-style: preserve-3d;
-  border:1px solid var(--second_color);
 }
 div.flip-card:hover div:only-child{
   transform: rotateY(180deg);
 }
-div.flip-card div:only-child div:first-of-type, div.flip-card div:only-child div:last-of-type{
+div.flip-card div:only-child > div{
   position:absolute;
   width:100%;
   height:100%;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  background-image:var(--second_background);
+  color:var(--second_color);
 }
 div.flip-card div:only-child div:first-of-type{
-  background-color:var(--third_color);
-  color:var(--second_color);
 }
 div.flip-card div:only-child div:last-of-type{
-  background-color:var(--third_color);
-  color:var(--second_color);
   transform: rotateY(180deg);
+}
+div.flip-card div:only-child > div > p{
+  vertical-align: middle;
+  text-align:center;
+  font-size:1.5em;
+  margin:0;
+}
+/* Zoom-Cards */
+div.zoom-card{
+  display: inline-block;
+  background-image: var(--second_background);
+}
+div.zoom-card:hover{
+  transform: scale(1.5);
+}
+div.zoom-card p{
+  padding:0.5em;
+  margin:0;
+  color:var(--second_color);
+  font-size:1.5em;
 }

@@ -1,8 +1,0 @@
-{
-  "pages":[
-    {"name":"Home","url":"index.html"},
-    {"name":"Programmazione","url":"programmazione.html"},
-    {"name":"GDR","url":"gdr.html"},
-    {"name":"Test","url":"testpage.html"}
-  ]
-}
