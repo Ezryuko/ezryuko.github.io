@@ -1,26 +1,33 @@
-<hmtl>
+<html lang="it" id="appunti">
   <head>
+    <meta charset="utf-8"/>
+    <link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://kit.fontawesome.com/b825376dbf.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-    <meta charset="utf-8">
+    <script src="../script.js"></script>
+    <title>GDR</title>
     <style>
       :root{
-        --first_color:#DABDAB; /* Background */
-        --second_color:#53443A; /* Main Text, Border */
-        --third_color:#FFE9D0; /* Special area background */
-        --fourth_color:#000000; /* Special area text */
-        --fifth_color:#53B6B6;
-        --sixth_color:#A3AF9E; /* Notes */
+        --first_color:#53443A;
+        --second_color:#000000;
 
-        --title_font:"Simply Rounded";
-        --text_font:"Chirota";
-        --note_font:"Chirota";
+        --first_background: #DABDAB;
+        --second_background: #FFE9D0;
+
+        --sans-serif_font: 'Roboto', sans-serif;
+        --cursive_font: 'Caveat', cursive;
+        --monospace_font: 'Roboto Mono', monospace;
+
         --celestial_font:"Enochian";
+        --note_color:#AAAAAA;
       }
+      /* List Setting */
       p{
-        margin:0.5em;
-        font-size:1.5em;
+        margin:5px;
+        font-size:24px;
         font-weight:bold;
       }
       span.celestial{
@@ -28,19 +35,18 @@
         font-size:2em;
       }
       i.note{
-        font-family:var(--note_font);
-        color:var(--sixth_color);
+        font-family:var(--cursive_font);
+        color:var(--note_color);
       }
       input{
         width:2em;
         text-align:center;
       }
     </style>
-    <link rel="stylesheet" href="style.css">
   </head>
   <body>
     <div class="content">
-      <div class="topic_list">
+      <div class="topic-list">
         <ul><li>Protagonisti</li>
           <li>
             <ul><li>Clary Fray</li>
@@ -53,7 +59,7 @@
                   <li>
                     <ul><li>Caratteristiche</li>
                       <li>
-                        <table class="horizontal_header vertical_header">
+                        <table class="hh vh">
                           <tr>
                             <td>Caratteristiche</td>
                             <td>FOR</td>
@@ -111,7 +117,7 @@
                   <li>
                     <ul><li>Caratteristiche</li>
                       <li>
-                        <table class="horizontal_header vertical_header">
+                        <table class="hh vh">
                           <tr>
                             <td>Caratteristiche</td>
                             <td>FOR</td>
@@ -210,7 +216,7 @@
                       <li>
                         <ul><li>Armi</li>
                           <li>
-                            <table class="horizontal_header vertical_header">
+                            <table class="hh vh">
                               <tr>
                                 <td>Nome</td>
                                 <td>Categoria</td>
@@ -240,7 +246,7 @@
                         </ul>
                         <ul><li>Armature</li>
                           <li>
-                            <table class="horizontal_header vertical_header">
+                            <table class="hh vh">
                               <tr>
                                 <td>Nome</td>
                                 <td>Categoria</td>
@@ -297,7 +303,7 @@
                   <li>
                     <ul><li>Caratteristiche</li>
                       <li>
-                        <table class="horizontal_header vertical_header">
+                        <table class="hh vh">
                           <tr>
                             <td>Caratteristiche</td>
                             <td>FOR</td>
@@ -355,7 +361,7 @@
                   <li>
                     <ul><li>Caratteristiche</li>
                       <li>
-                        <table class="horizontal_header vertical_header">
+                        <table class="hh vh">
                           <tr>
                             <td>Caratteristiche</td>
                             <td>FOR</td>
@@ -424,7 +430,7 @@
                   <li>
                     <ul><li>Caratteristiche</li>
                       <li>
-                        <table class="horizontal_header vertical_header">
+                        <table class="hh vh">
                           <tr>
                             <td>Caratteristiche</td>
                             <td>FOR</td>
@@ -570,7 +576,7 @@
           <li>
             <ul><li>Contatore Punti Caratteristica</li>
               <li>
-                <table class="horizontal_header">
+                <table class="hh">
                   <tr>
                     <td>FOR</td>
                     <td>DES</td>
@@ -662,7 +668,7 @@
                   <li>
                     <ul><li>Djinn</li>
                       <li>
-                        <table class="horizontal_header vertical_header">
+                        <table class="hh vh">
                           <tr><td>Lv</td><td>BaB</td><td>Tem</td><td>Ref</td><td>Vol</td></tr>
                           <tr><td>1</td><td>+1</td><td>+0</td><td>+0</td><td>+2</td></tr>
                           <tr><td>2</td><td>+2</td><td>+0</td><td>+0</td><td>+3</td></tr>

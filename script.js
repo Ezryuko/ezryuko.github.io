@@ -1,12 +1,26 @@
 function createElements(){
-  $("body").prepend("<div class=\"header\"><ul class=\"menu_bar\"><a href=\"../index.html\"><li>Home</li></a><a href=\"programmazione.html\"><li>Programmazione</li></a><a href=\"gdr.html\"><li>GDR</li></a><a href=\"testpage.html\"><li>Test</li></a></ul></div>");
-  $("div.topic_list ul").addClass("close");
-  $("div.topic_list ul li:first-child").prepend("<i class=\"fas fa-chevron-right\"></i><i class=\"fas fa-chevron-down\"></i>");
+  console.log("Creating components for " + $("html").attr("id"));
+  if($("html").attr("id")=="main-site"){
+    $("div.container > p:first-of-type").prepend("<i class=\"fas fa-chevron-right\"></i><i class=\"fas fa-chevron-down\"></i>");
+  }else if($("html").attr("id")=="appunti"){
+    $("body").prepend("<div class=\"header\"><ul class=\"menu-bar\"><a href=\"../index.html\"><li>Home</li></a><a href=\"programmazione.html\"><li>Programmazione</li></a><a href=\"gdr.html\"><li>GDR</li></ul></div>");
+    $("div.topic-list ul").addClass("close");
+    $("div.topic-list ul li:first-child").prepend("<i class=\"fas fa-chevron-right\"></i><i class=\"fas fa-chevron-down\"></i>");
+  }else if($("html").attr("id")=="sito-bea"){
+  }
+  setContainerToggles();
+  setTopicToggles();
+  console.log("Components created");
+}
+
+function setContainerToggles(){
+  $("div.container > p").click(function(){
+    $(this).parent().toggleClass("close");
+  });
 }
 
 function setTopicToggles(){
-  $("div.topic_list ul li:first-child").click(function(){
-    $(this).parent().toggleClass("open");
+  $("div.topic-list ul li:first-child").click(function(){
     $(this).parent().toggleClass("close");
   });
 }
@@ -67,6 +81,5 @@ function cpc(){
 }
 
 $(document).ready(function(){
-  setTopicToggles();
   createElements();
 });
